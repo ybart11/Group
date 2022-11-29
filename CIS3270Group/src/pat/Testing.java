@@ -6,7 +6,9 @@ public class Testing {
 		
 		System.out.println("Hiii :)");
 		
-		System.out.println("Hiiii :)"); 
+		System.out.println("Hiiiiii :)"); 
+		
+		System.out,println("Hi");
 		}
 	
 	
