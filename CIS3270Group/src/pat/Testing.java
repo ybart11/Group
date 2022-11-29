@@ -8,7 +8,7 @@ public class Testing {
 		
 		System.out.println("Hiiiiii :)"); 
 		
-		System.out,println("Hi");
+		System.out,println("Hii");
 		}
 	
 	
