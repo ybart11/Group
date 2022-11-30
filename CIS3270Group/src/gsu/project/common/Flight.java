@@ -4,7 +4,7 @@ package gsu.project.common;
 public class Flight {
 	
 	// Data fields 
-	private int id;
+	// private int id; <-- probably same as flightNum
 	private int flightNum; 
 	private String fromCity;
 	private String toCity;
