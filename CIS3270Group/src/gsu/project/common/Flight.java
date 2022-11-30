@@ -8,6 +8,10 @@ public class Flight {
 	private int flightNum; 
 	private String fromCity;
 	private String toCity;
+	private java.sql.Timestamp departureTime; 
+	private java.sql.Timestamp arrivalTime; 
+
+	
 	
 
 }
