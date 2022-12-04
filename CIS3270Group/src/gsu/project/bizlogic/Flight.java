@@ -1,4 +1,4 @@
-package gsu.project.common;
+package gsu.project.bizlogic;
 
 
 public class Flight {
@@ -10,6 +10,8 @@ public class Flight {
 	private String toCity;
 	private java.sql.Timestamp departureTime; 
 	private java.sql.Timestamp arrivalTime; 
+	
+	
 
 	
 	
