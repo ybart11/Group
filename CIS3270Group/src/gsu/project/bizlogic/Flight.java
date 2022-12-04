@@ -130,13 +130,5 @@ public class Flight implements Comparable <Flight> {
 			return 0;
 	}
 	
-	
-	
-	
-	
-	
-
-	
-	
 
 }
