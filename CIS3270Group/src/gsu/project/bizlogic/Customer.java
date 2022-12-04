@@ -49,7 +49,7 @@ public class Customer implements Comparable <Customer> {
 		this.securityAnswer = securityAnswer;
 	}
 	
-	// cREATE 
+	// Create generateAccount method 
 
 	// Get customer's ID
 	public int getCustomerId() {
