@@ -35,7 +35,9 @@ public class Flight implements Comparable <Flight> {
 	}
 	
 	// generateFlight and add to database method to be created
-	public static void generateFlight() {}
+	public static void generateFlight(String dCity, String desCity, 
+			String dTime, String aTime, String fDate,
+			String rFlight,int numSeats) {}
 	
 	// getPassangers method to be created if needed
 	

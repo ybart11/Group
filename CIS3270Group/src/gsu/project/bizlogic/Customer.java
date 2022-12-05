@@ -7,7 +7,7 @@ package gsu.project.bizlogic;
 public class Customer implements Comparable <Customer> {
 	
 	// Data fields 
-	private int customerID;
+	private int customerId;
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -33,9 +33,9 @@ public class Customer implements Comparable <Customer> {
 	}
 	
 	
-	public Customer(int customerID, String firstName, String lastName, String address, int zip, String state,
+	public Customer(int customerId, String firstName, String lastName, String address, int zip, String state,
 			String userName, String password, String email, int ssn, String securityQuestion, String securityAnswer) {
-		this.customerID = customerID;
+		this.customerId = customerId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
@@ -53,12 +53,12 @@ public class Customer implements Comparable <Customer> {
 
 	// Get customer's ID
 	public int getCustomerId() {
-		return this.customerID;
+		return this.customerId;
 	}
 	
 	// Set customer's ID 
-	public void setCustomerId (int customerID) {
-		this.customerID = customerID;
+	public void setCustomerId (int customerId) {
+		this.customerId = customerId;
 	}
 	
 	// Get customer first name 
