@@ -2,14 +2,13 @@ package gsu.project.bizlogic;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 import gsu.project.database.InsertDB;
+import gsu.project.gui.*;
 
 
 public class Flight implements Comparable <Flight> {
 	
 	// Data fields 
-	// private int id; <-- probably same as flightNum
 	private int flightNum; 
 	private String departureCity;
 	private String destinationCity;
@@ -46,9 +45,11 @@ public class Flight implements Comparable <Flight> {
 		
 		InsertDB.insertFlight(flight);
 		
-		if (InsertDB.success) {
-			
-		}
+	 	if(InsertDB.success) {
+	 		AlertBox.display("Flight Created", "You created new flight. Flight Number is: " + id);
+	 	}else {
+	 		AlertBox.display("Alert!!!!", "Something went wrong please check the fields and try again");
+	 	}
 	}
 	
 	// getPassangers method to be created if needed

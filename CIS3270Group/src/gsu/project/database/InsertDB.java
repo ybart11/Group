@@ -19,11 +19,14 @@ public class InsertDB {
 	static final String databaseUsername = "root";
 	static final String databasePassword = "";
 	
-	public Boolean success; 
+	public static Boolean success; 
 	public ArrayList <Object> returnList;
 	
 	// Query to insert a new flight into the database 
 	public static void insertFlight (Flight flight) {
+		
+		success = false; 
+		
 		try {
 			
 			Class.forName(driver);
@@ -46,10 +49,15 @@ public class InsertDB {
 			ps.executeUpdate();
 			
 			con.close();
+			
+			success = true;
 
 			
 		} catch (Exception e) {
+			
+			System.out.println("something messed up in database! :-(");
 			e.printStackTrace();
+			success = false;
 		}
 		
 	}
@@ -107,6 +115,8 @@ public class InsertDB {
 	}
 	
 	public void insertCustomer (Customer customer) {
+		
+		success = false; 
 		try {
 			
 			Class.forName(driver); 
@@ -136,10 +146,13 @@ public class InsertDB {
 			
 			con.close();
 			
+			success = true;
 			
 		} catch (SQLIntegrityConstraintViolationException ex) {
 			AlertBox.display("Duplicate Account Alert!", "We have an account already with your email address" 
 					+ "\nPlease try again or use our password recovery system");
+			
+			success = false;
 			
 		} catch (SQLException e1) {
 			e1.printStackTrace();
