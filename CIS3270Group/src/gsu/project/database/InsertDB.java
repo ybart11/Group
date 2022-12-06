@@ -6,7 +6,9 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import gsu.project.bizlogic.Customer;
 import gsu.project.bizlogic.Flight;
+import gsu.project.bizlogic.Booking;
 import gsu.project.gui.AlertBox;
+
 
 public class InsertDB {
 	

@@ -215,6 +215,11 @@ public class Customer implements Comparable <Customer> {
 			return 0;
 	
 	}
+	@Override
+	public String toString () {
+		return "\nCustomerID: " + getCustomerId() + "\nUsername: " + getUserName() 
+		+ "\nFirst name: " + getFirstName() + "\nLast name: " + getLastName();
+	}
 	
 
 	

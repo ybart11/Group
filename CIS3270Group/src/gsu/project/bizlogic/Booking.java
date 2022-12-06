@@ -1,27 +1,28 @@
 package gsu.project.bizlogic;
 
 import java.util.Random;
+import gsu.project.database.RetrieveDB;
 
 public class Booking {
 	
 	// Data fields
 	private int ticketNum;
-	private int accountID;
+	private int customerID;
 	private int flightNumber;
 	private String flightDate;
 	private String flightTime;
 	private String deptCity;
 	private String desCity;
-	//private String passanger_userName;\\
+	private String passenger_userName;
 	private String returnFlight;
 	
 	public Booking() {}
 
-	public Booking(int ticketNum, int accountID, int flightNumber, String flightDate, String flightTime,
+	public Booking(int ticketNum, int customerID, int flightNumber, String flightDate, String flightTime,
 			String deptCity, String desCity, String returnFlight) {
 		
 		this.ticketNum = ticketNum;
-		this.accountID = accountID;
+		this.customerID = customerID;
 		this.flightNumber = flightNumber;
 		this.flightDate = flightDate;
 		this.flightTime = flightTime;
@@ -43,7 +44,11 @@ public class Booking {
 	}
 	
 	// Method that will insert info into database
-	public static void bookFlight() {}
+	public static void bookFlight(int flightNumber) {
+		
+		int ticketNum = makeTicketNum();
+		Flight toBook = RetrieveDB.retrieveFlight(flightNumber);
+	}
 
 	public int getTicketNum() {
 		return ticketNum;
@@ -52,7 +57,7 @@ public class Booking {
 	// Method that generates random number for ticket number
 	public static int makeTicketNum () {
 		Random rand = new Random();
-		int num = rand.nextInt(1000);
+		int num = rand.nextInt(999);
 		return num;
 	}
 
@@ -60,12 +65,12 @@ public class Booking {
 		this.ticketNum = ticketNum;
 	}
 
-	public int getAccountID() {
-		return accountID;
+	public int getCustomerID() {
+		return customerID;
 	}
 
-	public void setAccountID(int accountID) {
-		this.accountID = accountID;
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
 	}
 
 	public int getFlightNumber() {
@@ -106,6 +111,14 @@ public class Booking {
 
 	public void setDesCity(String desCity) {
 		this.desCity = desCity;
+	}
+	
+	public String getPassenger_userName() {
+		return passenger_userName;
+	}
+
+	public void setPassenger_userName(String passenger_userName) {
+		this.passenger_userName = passenger_userName;
 	}
 
 	public String getReturnFlight() {

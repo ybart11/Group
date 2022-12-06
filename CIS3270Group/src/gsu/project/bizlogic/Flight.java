@@ -3,6 +3,8 @@ package gsu.project.bizlogic;
 import java.util.ArrayList;
 import java.util.Random;
 
+import gsu.project.database.InsertDB;
+
 
 public class Flight implements Comparable <Flight> {
 	
@@ -41,9 +43,26 @@ public class Flight implements Comparable <Flight> {
 		int id = generateFlightNum();
 		
 		Flight flight = new Flight (id, dCity, desCity, dTime, aTime, fDate, rFlight, numSeats);
+		
+		InsertDB.insertFlight(flight);
+		
+		if (InsertDB.success) {
+			
+		}
 	}
 	
 	// getPassangers method to be created if needed
+	public String getPassengers (ArrayList <Customer> passengers) {
+		String toPrint = "";
+		for (int i = 0; i < passengers.size(); i++) {
+			
+			Customer customer = passengers.get(i);
+			toPrint += customer.toString();
+			
+		}
+		
+		return toPrint;
+	}
 	
 	// Method that generates a random flight number
 	public static int generateFlightNum() {
