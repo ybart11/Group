@@ -21,7 +21,7 @@ public class Flight implements Comparable <Flight> {
 	public Flight () {}
 
 	public Flight(int flightNum, String departureCity, String destinationCity, String departTime, String arriveTime,
-			String flightDate, String returnFlight, ArrayList<Customer> passengers, int numOfSeats) {
+			String flightDate, String returnFlight, int numOfSeats) {
 		
 		this.flightNum = flightNum;
 		this.departureCity = departureCity;
@@ -30,14 +30,18 @@ public class Flight implements Comparable <Flight> {
 		this.arriveTime = arriveTime;
 		this.flightDate = flightDate;
 		this.returnFlight = returnFlight;
-		this.passengers = passengers;
 		this.numOfSeats = numOfSeats;
 	}
 	
 	// generateFlight and add to database method to be created
 	public static void generateFlight(String dCity, String desCity, 
 			String dTime, String aTime, String fDate,
-			String rFlight,int numSeats) {}
+			String rFlight,int numSeats) {
+		
+		int id = generateFlightNum();
+		
+		Flight flight = new Flight (id, dCity, desCity, dTime, aTime, fDate, rFlight, numSeats);
+	}
 	
 	// getPassangers method to be created if needed
 	
