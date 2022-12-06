@@ -78,12 +78,55 @@ public class AdminGUI extends Application {
 		borderPane.setPrefSize(700, 500);
 		
 		scene = new Scene(borderPane);
-		primaryStage.setTitle("Admin Flight Edit Window");
+		primaryStage.setTitle("PantherAir Admin Edit");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
 		
+		myFlights.setOnAction(e -> {
+			MainMenu newAdmin = new MainMenu();
+			
+			try {
+				newAdmin.start(primaryStage);
+			
+			} catch(Exception e2) {
+				e2.printStackTrace();
+			}
+			
+		});
 		
+		deleteFlight.setOnAction(e -> {
+			
+			int flightNumDB = Integer.parseInt(deleteFly.getText());
+			
+			try {
+				
+				updateDB.deleteFlight(flightNumDB);
+				
+				if(updateDB.result == false) {
+					throw new Exception("There is an Error");
+					
+					
+				}
+				
+				else { 
+					AlertBox.display("Flight DELETED", "This flight has been removed");
+					
+					AdminGUI adminScreen = new AdminGUI();
+					try {
+						adminScreen.start(primaryStage);
+					} 
+					catch(Exception e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+			
+			catch(Exception ex1) {
+				AlertBox.display("ALERT", ex1.getMessage());
+			}
+			
+		});
 
 		
 

@@ -34,9 +34,9 @@ public class SplashScreen extends Application {
 			
 			hbox = new HBox();
 			
-			hbox.setPadding(new Insets(5, 5, 5, 5));
+			hbox.setPadding(new Insets(200, 200, 200, 200));
 			
-			FadeTransition fadeTransition = new FadeTransition(Duration.millis(10000), hbox);
+			FadeTransition fadeTransition = new FadeTransition(Duration.millis(5000), hbox);
 			fadeTransition.setFromValue(1.0);
 			fadeTransition.setToValue(0.0);
 			fadeTransition.setCycleCount(1);
@@ -56,30 +56,21 @@ public class SplashScreen extends Application {
 				}
 			});
 			
-			Image image = new Image("gsu.project.gui/plane-icon.png");
+
 			
-			ImageView imageView = new ImageView(image);
-			
-			imageView.setX(100);
-			imageView.setY(95);
-			
-			imageView.setFitHeight(445);
-			imageView.setFitWidth(500);
-			
-				Text splashText = new Text(25, 25, "Welcome to PantherAir");
+				Text splashText = new Text(1000, 1000, "Welcome to PantherAir");
 			
 			splashText.setFill(Color.WHITE);
 			splashText.setFont(Font.font(java.awt.Font.SERIF, 35));
 			
-			imageView.setPreserveRatio(true);
 			
-			hbox.getChildren().addAll(imageView, splashText);
+			hbox.getChildren().addAll(splashText);
 			
 			
 			Scene scene = new Scene(hbox, 700, 550, Color.BLACK);
 			
 			
-			primaryStage.setTitle("Loading Image");
+			primaryStage.setTitle("PantherAir");
 			
 			primaryStage.setScene(scene);
 			
