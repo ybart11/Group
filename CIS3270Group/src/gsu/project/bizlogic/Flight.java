@@ -47,7 +47,8 @@ public class Flight implements Comparable <Flight> {
 		
 	 	if(InsertDB.success) {
 	 		AlertBox.display("Flight Created", "You created new flight. Flight Number is: " + id);
-	 	}else {
+	 	} 
+	 	else {
 	 		AlertBox.display("Alert!!!!", "Something went wrong please check the fields and try again");
 	 	}
 	}

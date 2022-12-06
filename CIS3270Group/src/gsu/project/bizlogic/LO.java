@@ -1,7 +1,10 @@
 package gsu.project.bizlogic;
 
+import gsu.project.database.LoginDB;
+
 // Class that logs in to database 
 // Class that checks login 
+
 public class LO {
 
 	private String username;
@@ -28,7 +31,9 @@ public class LO {
 		if(this.getPassword().equals(check)) {
 			setConfirmLogin(true);
 			
-		}else
+		}
+		
+		else
 			setConfirmLogin(false);
 		
 		
@@ -36,7 +41,7 @@ public class LO {
 	
 	public Boolean executeLogin() {
 		
-		Login log = new LoginDB();
+		LoginDB log = new LoginDB();
 		String check = log.loginConn(getUsername());
 		
 		checkPasword(check);
