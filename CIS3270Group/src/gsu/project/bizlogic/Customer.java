@@ -1,6 +1,9 @@
 package gsu.project.bizlogic;
 
-// Yovany 
+import java.util.Random;
+
+import gsu.project.database.InsertDB;
+
 
 
 
@@ -11,8 +14,8 @@ public class Customer implements Comparable <Customer> {
 	private String firstName;
 	private String lastName;
 	private String address;
-	private int zip;
 	private String state;
+	private int zip;
 	private String userName;
 	private String password;
 	private String email;
@@ -24,6 +27,7 @@ public class Customer implements Comparable <Customer> {
 	// No arg constructor 
 	public Customer() {
 		
+		
 	}
 	
 	// Constructor that defines username and password 
@@ -33,8 +37,8 @@ public class Customer implements Comparable <Customer> {
 	}
 	
 	
-	public Customer(int customerId, String firstName, String lastName, String address, int zip, String state,
-			String userName, String password, String email, int ssn, String securityQuestion, String securityAnswer) {
+	public Customer(int customerId, String userName, String password, String firstName, String lastName, String address, String state,
+			 String email,  int zip, int ssn, String securityQuestion, String securityAnswer) {
 		this.customerId = customerId;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -50,6 +54,30 @@ public class Customer implements Comparable <Customer> {
 	}
 	
 	// Create generateAccount method 
+	public static void generateAccount(String fname, String lname, String address, String email, String state, int zip,
+			int ssn, String un, String pword, String secQuestion, String sa) {
+
+		int id = makeCustomerID();
+
+		Customer acct = new Customer(id, un, pword, fname, lname, address, state, email, zip, ssn, secQuestion, sa);
+
+		InsertDB input = new InsertDB();
+
+		input.insertAccount(acct);
+	}
+	
+	// generates a random account ID
+	public static int makeCustomerID() {
+
+		Random rand = new Random();
+
+		int ID = rand.nextInt(99999);
+
+		return ID;
+	}
+
+	
+	
 
 	// Get customer's ID
 	public int getCustomerId() {
