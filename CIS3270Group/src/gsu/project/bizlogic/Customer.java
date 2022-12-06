@@ -201,7 +201,7 @@ public class Customer implements Comparable <Customer> {
 	public void setSsn(int ssn) {
 		this.ssn = ssn;
 	}
-
+	
 
 	@Override
 	public int compareTo(Customer o) {

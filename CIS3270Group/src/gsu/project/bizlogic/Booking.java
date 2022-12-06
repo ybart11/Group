@@ -2,6 +2,8 @@ package gsu.project.bizlogic;
 
 import java.util.Random;
 import gsu.project.database.RetrieveDB;
+import gsu.project.database.InsertDB;
+import gsu.project.gui.Login;
 
 public class Booking {
 	
@@ -47,7 +49,10 @@ public class Booking {
 	public static void bookFlight(int flightNumber) {
 		
 		int ticketNum = makeTicketNum();
+		
 		Flight toBook = RetrieveDB.retrieveFlight(flightNumber);
+		
+		Booking booking = new Booking();
 	}
 
 	public int getTicketNum() {
