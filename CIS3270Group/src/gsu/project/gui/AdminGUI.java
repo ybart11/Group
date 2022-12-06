@@ -2,6 +2,7 @@ package gsu.project.gui;
 
 
 import gsu.project.bizlogic.*;
+import gsu.project.database.*;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -101,9 +102,9 @@ public class AdminGUI extends Application {
 			
 			try {
 				
-				updateDB.deleteFlight(flightNumDB);
+				UpdateDB.deleteFlight(flightNumDB);
 				
-				if(updateDB.result == false) {
+				if(UpdateDB.result == false) {
 					throw new Exception("There is an Error");
 					
 					

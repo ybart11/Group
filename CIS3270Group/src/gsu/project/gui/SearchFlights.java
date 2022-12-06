@@ -59,10 +59,43 @@ public class SearchFlights extends Application {
 		departureCity = new Label(" From ");
 		GridPane.setConstraints(departureCity, 0, 0);
 		
+		ChoiceBox<String> choiceBox = new ChoiceBox<>();
+		GridPane.setConstraints(choiceBox, 0, 1);
 		
+		choiceBox.getItems().add("Atlanta");
+		choiceBox.getItems().add("Chicago");
+		choiceBox.getItems().add("New York");
+		choiceBox.getItems().add("Miami");
+		choiceBox.getItems().add("Los Angeles");
+		choiceBox.getItems().add("Edmond");
+		
+		destinationCity = new Label("To");
+		GridPane.setConstraints(destinationCity, 1, 0);
+		
+		ChoiceBox<String> choiceBox1 = new ChoiceBox<>();
+		GridPane.setConstraints(choiceBox1, 1, 1);
+		
+		choiceBox.getItems().add("Atlanta");
+		choiceBox.getItems().add("Chicago");
+		choiceBox.getItems().add("New York");
+		choiceBox.getItems().add("Miami");
+		choiceBox.getItems().add("Los Angeles");
+		choiceBox.getItems().add("Edmond");
 	
-	
-	
-
+		departureDate = new Label("Depart Date");
+		GridPane.setConstraints(departureDate, 0, 3);
+		
+		DatePicker datePicker = new DatePicker();
+		datePicker.setOnAction(e -> {
+			lD = datePicker.getValue();
+			
+			
+		});
+		
+		StackPane root = new StackPane();
+		root.getChildren().add(datePicker);
+		GridPane.setConstraints(datePicker, 0, 4);
+		
+		returnDate = new Label("Return Date");
  }
 }

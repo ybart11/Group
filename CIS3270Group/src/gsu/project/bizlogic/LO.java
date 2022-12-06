@@ -44,7 +44,7 @@ public class LO {
 		LoginDB log = new LoginDB();
 		String check = log.loginConn(getUsername());
 		
-		checkPasword(check);
+		checkPassword(check);
 		
 		return confirmLogin;
 	}
