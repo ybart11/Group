@@ -51,8 +51,6 @@ public class AdminGUI extends Application {
 		table = new TableView<>();
 		table.getColumns().addAll(flightNum, flightDate);
 		
-		
-		
 		BorderPane borderPane = new BorderPane();
 		
 		
@@ -128,7 +126,20 @@ public class AdminGUI extends Application {
 			}
 			
 		});
+		
+		back.setOnAction(e -> {
+			Login login = new Login();
+			try {
+				login.start(primaryStage);
+			} catch (Exception e1) {
 
+				e1.printStackTrace();
+			}
+		});
+
+		addFlight.setOnAction(e -> {
+			
+		});
 		
 
  }

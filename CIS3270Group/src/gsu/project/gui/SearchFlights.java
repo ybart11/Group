@@ -33,6 +33,7 @@ public class SearchFlights extends Application {
 	Button search;
 	Button departureButton;
 	Button destinationButton;
+	Button book;
 	LocalDate lD;
 	LocalDate lD2;
 	TextField passengerInput;
@@ -75,15 +76,16 @@ public class SearchFlights extends Application {
 		ChoiceBox<String> choiceBox1 = new ChoiceBox<>();
 		GridPane.setConstraints(choiceBox1, 1, 1);
 		
-		choiceBox.getItems().add("Atlanta");
-		choiceBox.getItems().add("Chicago");
-		choiceBox.getItems().add("New York");
-		choiceBox.getItems().add("Miami");
-		choiceBox.getItems().add("Los Angeles");
-		choiceBox.getItems().add("Edmond");
+		choiceBox1.getItems().add("Atlanta");
+		choiceBox1.getItems().add("Chicago");
+		choiceBox1.getItems().add("New York");
+		choiceBox1.getItems().add("Miami");
+		choiceBox1.getItems().add("Los Angeles");
+		choiceBox1.getItems().add("Edmond");
 	
 		departureDate = new Label("Depart Date");
 		GridPane.setConstraints(departureDate, 0, 3);
+		
 		
 		DatePicker datePicker = new DatePicker();
 		datePicker.setOnAction(e -> {
@@ -92,10 +94,28 @@ public class SearchFlights extends Application {
 			
 		});
 		
+		book = new Button("Book");
+		
+		
 		StackPane root = new StackPane();
 		root.getChildren().add(datePicker);
-		GridPane.setConstraints(datePicker, 0, 4);
+		GridPane.setConstraints(datePicker, 0, 4); 
 		
-		returnDate = new Label("Return Date");
+		scene = new Scene(pane, 350, 350, Color.BEIGE);
+		
+		pane.getChildren().addAll(departureDate, datePicker, destinationCity, choiceBox, choiceBox1,
+				departureCity);
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Search Flights");
+		primaryStage.show();
+		
+		departureDate = new Label("Return Date");
+		
+		book.setOnAction(e -> { 
+			
+			
+			
+		});
+		
  }
 }

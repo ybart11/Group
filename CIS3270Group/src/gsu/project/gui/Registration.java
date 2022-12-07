@@ -39,6 +39,8 @@ public class Registration extends Application {
 	private static TextField zipcodeInput;
 	private static TextField stateInput;
 	private static TextField usernameInput;
+	private static PasswordField passwordInput;
+	private static PasswordField confirmPasswordInput;
 	private static TextField emailInput;
 	private static TextField ssnInput;
 	private static TextField securityAnswerInput;
@@ -95,40 +97,77 @@ public class Registration extends Application {
 			
 			
 			state = new Label("State");
+			GridPane.setConstraints(state, 0, 6);
+			
+			stateInput = new TextField();
+			stateInput.setPromptText("Enter the State");
+			GridPane.setConstraints(stateInput, 0, 7);
 			
 			
 			email = new Label("Email");
+			GridPane.setConstraints(email, 2, 0);
+			
+			emailInput = new TextField();
+			emailInput.setPromptText("Enter Email Address");
+			GridPane.setConstraints(emailInput, 2, 1);
 			
 			
 			ssn = new Label("SSN");
+			GridPane.setConstraints(ssn, 1, 6);
+			
+			ssnInput = new TextField();
+			ssnInput.setPromptText("Enter SSN");
+			GridPane.setConstraints(ssnInput, 1, 7);
 			
 			
 			username = new Label("Username");
+			GridPane.setConstraints(username, 1, 0);
+			
+			usernameInput = new TextField();
+			usernameInput.setPromptText("Enter username");
+			GridPane.setConstraints(usernameInput, 1, 1);
 			
 			
 			password = new Label("Password");
+			GridPane.setConstraints(password, 1, 2);
+			
+			passwordInput = new PasswordField();
+			passwordInput.setPromptText("Enter Password");
+			GridPane.setConstraints(passwordInput, 1, 3);
 			
 			
 			confirmPassword = new Label("Re-type Password");
+			GridPane.setConstraints(confirmPassword, 1, 4);
 			
-			
-			securityAnswer = new Label("Security Answer");
-			GridPane.setConstraints(securityAnswer, 1, 10);
-			
+			confirmPasswordInput = new PasswordField();
+			confirmPasswordInput.setPromptText("Re-Enter Password");
+			GridPane.setConstraints(confirmPasswordInput, 1, 5); 
+					
 			back = new Button("Back");
+			GridPane.setConstraints(back, 0, 11);
 			
 			Button submit = new Button("Submit");
 			GridPane.setConstraints(submit, 0, 10);
 			
-			pane.getChildren().addAll(lastNameInput, lastName, firstNameInput, firstName,
-					submit, zipcode, zipcodeInput, address, addressInput);
+			pane.getChildren().addAll(firstNameInput, firstName, lastNameInput, lastName, 
+					submit, zipcode, zipcodeInput, address, addressInput, ssn, ssnInput, username, 
+					usernameInput, email, emailInput, back, confirmPassword, confirmPasswordInput, 
+					password, passwordInput);
 			
 			scene = new Scene(pane, 700, 700);
 			primaryStage.setScene(scene);
-			primaryStage.show();
+			primaryStage.show(); 
 		
 			
-			
+			back.setOnAction(e -> {
+				Login login = new Login();
+				try {
+					login.start(primaryStage);
+				} catch (Exception e1) {
+					
+					e1.printStackTrace();
+				}
+			});
 			
 			
 		}

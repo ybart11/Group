@@ -10,8 +10,7 @@ public class Admin extends Customer {
 
 	public Admin(int customerID, String firstName, String lastName, String address, int zip, String state,
 			String userName, String password, String email, int ssn, String securityQuestion, String securityAnswer) {
-		super(customerID, firstName, lastName, address, zip, state, userName, password, email, ssn, securityQuestion,
-				securityAnswer);
+		super(firstName, lastName);
 
 	}
 	

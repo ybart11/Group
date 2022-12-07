@@ -101,14 +101,14 @@ public class AddFlights extends Application {
 		GridPane.setConstraints(leaveTime, 2, 0);
 		
 		departureTime = new TextField();
-		departureTime.setPromptText(" Depature Time "); // this will display gray line in the box
+		departureTime.setPromptText(" Depature Time ");
 		GridPane.setConstraints(departureTime, 2, 1);
 		
 		arrivalTime = new Label(" Arrive Time ");
 		GridPane.setConstraints(arrivalTime, 2, 2);
 		
 		returnTime = new TextField();
-		returnTime.setPromptText(" Arrive Time "); // this will display gray line in the box
+		returnTime.setPromptText(" Arrive Time ");
 		GridPane.setConstraints(returnTime, 2, 3);
 		
 		

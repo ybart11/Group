@@ -5,7 +5,7 @@ import gsu.project.database.RetrieveDB;
 import gsu.project.database.InsertDB;
 import gsu.project.gui.Login;
 
-public class Booking {
+public class Booking extends Login {
 	
 	// Data fields
 	private int ticketNum;

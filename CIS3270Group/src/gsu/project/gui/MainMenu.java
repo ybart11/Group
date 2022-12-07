@@ -38,43 +38,45 @@ public class MainMenu extends Application {
 		launch(args);
 	}
 
+		@SuppressWarnings("unchecked")
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			
 		
-			TableColumn<Booking, Integer> ticketNum = new TableColumn("Ticket #");
+			TableColumn<Booking, Integer> ticketNum = new TableColumn<>("Ticket #");
 			ticketNum.setMinWidth(50);
 			ticketNum.setCellValueFactory(new PropertyValueFactory<>("ticketNumber"));
 			
-			TableColumn<Booking, Integer> flightNumber = new TableColumn("Flight #");
+			TableColumn<Booking, Integer> flightNumber = new TableColumn<>("Flight #");
 			ticketNum.setMinWidth(70);
 			ticketNum.setCellValueFactory(new PropertyValueFactory<>("flight_number"));
 			
-			TableColumn<Booking, String> departDate = new TableColumn("Depart Date");
+			TableColumn<Booking, String> departDate = new TableColumn<>("Depart Date");
 			ticketNum.setMinWidth(100);
 			ticketNum.setCellValueFactory(new PropertyValueFactory<>("ticketNumber"));
 			
-			TableColumn<Booking, String> departTime = new TableColumn("Depart Time");
+			TableColumn<Booking, String> departTime = new TableColumn<>("Depart Time");
 			ticketNum.setMinWidth(100);
 			ticketNum.setCellValueFactory(new PropertyValueFactory<>("ticketNumber"));
 			
-			TableColumn<Booking, String> deptCity = new TableColumn("Depart City");
+			TableColumn<Booking, String> deptCity = new TableColumn<>("Depart City");
 			ticketNum.setMinWidth(100);
 			ticketNum.setCellValueFactory(new PropertyValueFactory<>("ticketNumber"));
 			
-			TableColumn<Booking, String> desCity = new TableColumn("Destination City");
+			TableColumn<Booking, String> desCity = new TableColumn<>("Destination City");
 			ticketNum.setMinWidth(100);
 			ticketNum.setCellValueFactory(new PropertyValueFactory<>("ticketNumber"));
 			
-			TableColumn<Booking, String> returnFlight = new TableColumn("Return Date");
+			TableColumn<Booking, String> returnFlight = new TableColumn<>("Return Date");
 			ticketNum.setMinWidth(100);
 			ticketNum.setCellValueFactory(new PropertyValueFactory<>("ticketNumber"));
 		    
-			ObservableList<Booking> list = RetrieveDB.retrieveBookings(Login.currentCustomer.getCustomerId());
+			
 			
 			table = new TableView<>();
-			table.setItems(list);
-			table.getColumns().addAll(ticketNum, flightNumber, departDate, departTime, deptCity );
+			table.getColumns().addAll(ticketNum, flightNumber, departDate, departTime, deptCity, returnFlight, desCity);
+			
+			
 			
 			BorderPane borderpane = new BorderPane();
 			
@@ -101,7 +103,6 @@ public class MainMenu extends Application {
 			borderpane.setPrefSize(500, 500);
 			
 			Scene scene = new Scene(borderpane);
-			
 			primaryStage.setTitle("Main Menu");
 			primaryStage.setScene(scene);
 			primaryStage.show();

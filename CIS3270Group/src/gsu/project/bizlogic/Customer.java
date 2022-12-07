@@ -63,7 +63,7 @@ public class Customer implements Comparable <Customer> {
 
 		InsertDB input = new InsertDB();
 
-		input.insertAccount(acct);
+		input.insertCustomer(acct);
 	}
 	
 	// generates a random account ID

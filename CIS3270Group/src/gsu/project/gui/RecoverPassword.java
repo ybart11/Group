@@ -47,7 +47,7 @@ public class RecoverPassword extends Application {
 		GridPane.setConstraints(email, 0, 0);
 		
 	confirmEmailInput = new TextField();
-		confirmEmailInput .setPromptText("Email:");
+		confirmEmailInput.setPromptText("Email:");
 		GridPane.setConstraints(confirmEmailInput, 0, 3);
 		
 	securityQuestion = new Label("Choose a security question");
@@ -80,6 +80,7 @@ public class RecoverPassword extends Application {
 	primaryStage.setTitle("Recover Password");
 	primaryStage.setScene(scene);
 	primaryStage.show();
+	
 	
 	
 	
