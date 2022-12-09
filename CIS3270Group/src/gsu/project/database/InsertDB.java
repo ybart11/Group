@@ -114,7 +114,8 @@ public class InsertDB {
 		}
 	}
 	
-	public void insertCustomer (Customer customer) {
+	
+	public static void insertCustomer (Customer customer) {
 		
 		success = false; 
 		try {
