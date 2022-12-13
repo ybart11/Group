@@ -24,7 +24,7 @@ public class TestConnection {
 		InsertDB.insertFlight(flight);
 		
 		// Delete a flight using flight_number 126 
-		UpdateDB.deleteFlight(126);
+		UpdateDB.deleteFlight(126); 
 		
 		
 		
