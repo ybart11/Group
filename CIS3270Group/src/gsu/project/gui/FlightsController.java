@@ -7,12 +7,15 @@ import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.*;
+import java.io.IOException;
 import java.util.*;
 import javafx.scene.control.cell.*;
+import javafx.scene.image.Image;
 import javafx.geometry.*;
 import javafx.collections.*;
+import javafx.fxml.FXMLLoader;
 
-public class Flights extends Application {
+public class FlightsController extends Application {
 	
 	TableView<Flight> table;
 	
@@ -79,18 +82,7 @@ public class Flights extends Application {
 		BorderPane.setAlignment(back, Pos.CENTER_LEFT);
 		BorderPane.setAlignment(inputFlightNum, Pos.CENTER);
 		
-		BorderPane pane = new BorderPane();
-		
-			pane.setTop(label1);
-			pane.setCenter(inputFlightNum);
-			pane.setRight(bookFlight); 
-			pane.setLeft(back);
-			pane.setBottom(table);
-			pane.setPrefSize(700, 600);
-			Scene scene = new Scene(pane);
-			primaryStage.setTitle("Available Flight");
-			primaryStage.setScene(scene);
-			primaryStage.show();
+	
 		
 		bookFlight.setOnAction(e -> { 
 			
@@ -116,6 +108,17 @@ public class Flights extends Application {
 			}
 			
 		});
+		
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
+			Scene scene = new Scene(root);
+			Image iconBox = new Image("FlightPlane.png");
+			primaryStage.getIcons().add(iconBox);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
 

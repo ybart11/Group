@@ -20,7 +20,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class AdminGUI extends Application {
+public class AdminController extends Application {
 	
 	Scene scene;
 	GridPane grid;
@@ -78,6 +78,8 @@ public class AdminGUI extends Application {
 		
 		scene = new Scene(borderPane);
 		primaryStage.setTitle("PantherAir Admin Edit");
+		Image iconBox = new Image("FlightPlane.png");
+		primaryStage.getIcons().add(iconBox);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
@@ -111,7 +113,7 @@ public class AdminGUI extends Application {
 				else { 
 					AlertBox.display("Flight DELETED", "This flight has been removed");
 					
-					AdminGUI adminScreen = new AdminGUI();
+					AdminController adminScreen = new AdminController();
 					try {
 						adminScreen.start(primaryStage);
 					} 

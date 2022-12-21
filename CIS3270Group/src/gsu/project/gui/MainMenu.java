@@ -6,7 +6,9 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -102,10 +104,12 @@ public class MainMenu extends Application {
 			borderpane.setBottom(table);
 			borderpane.setPrefSize(500, 500);
 			
-			Scene scene = new Scene(borderpane);
+			Parent root = FXMLLoader.load(getClass().getResource("/SceneBuilder.fxml"));
+			Scene scene = new Scene(root);
 			primaryStage.setTitle("Main Menu");
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			
 			
 			logout.setOnAction(e -> {
 				
@@ -146,7 +150,7 @@ public class MainMenu extends Application {
 				
 				if(Login.currentCustomer.getUserName().contains("Admin")) {
 					
-					AdminGUI admin = new AdminGUI();
+					AdminController admin = new AdminController();
 					
 					try {
 						

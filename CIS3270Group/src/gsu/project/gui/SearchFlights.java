@@ -3,13 +3,16 @@ package gsu.project.gui;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -97,25 +100,19 @@ public class SearchFlights extends Application {
 		book = new Button("Book");
 		
 		
-		StackPane root = new StackPane();
-		root.getChildren().add(datePicker);
-		GridPane.setConstraints(datePicker, 0, 4); 
-		
-		scene = new Scene(pane, 350, 350, Color.BEIGE);
-		
-		pane.getChildren().addAll(departureDate, datePicker, destinationCity, choiceBox, choiceBox1,
-				departureCity);
-		primaryStage.setScene(scene);
-		primaryStage.setTitle("Search Flights");
-		primaryStage.show();
-		
-		departureDate = new Label("Return Date");
-		
-		book.setOnAction(e -> { 
+
 			
-			
-			
-		});
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("SearchFlights.fxml"));
+			Scene scene = new Scene(root);
+			Image iconBox = new Image("FlightPlane.png");
+			primaryStage.getIcons().add(iconBox);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+		
 		
  }
 }

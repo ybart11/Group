@@ -13,7 +13,7 @@ import javafx.scene.layout.*;
 import javafx.scene.Scene;
 
 
-public class AddFlights extends Application {
+public class AddFlightsController extends Application {
 	
 	GridPane pane;
 	Scene scene;
@@ -163,7 +163,7 @@ public class AddFlights extends Application {
 		
 		
 		backButton.setOnAction(e -> {
-			AdminGUI adminscreen = new AdminGUI();
+			AdminController adminscreen = new AdminController();
 			try {
 				adminscreen.start(primaryStage);
 			} catch (Exception e1) {
@@ -173,7 +173,6 @@ public class AddFlights extends Application {
 		});
 		
 		scene = new Scene(pane, 600, 600, Color.DARKBLUE);
-		scene.getStylesheets().add("graphicUserInterface/thing.css");
 		primaryStage.setTitle(" Admin ");
 		primaryStage.setScene(scene);
 		primaryStage.show();

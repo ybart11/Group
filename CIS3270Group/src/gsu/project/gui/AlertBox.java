@@ -3,8 +3,13 @@ package gsu.project.gui;
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
+
+import java.io.IOException;
+
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.*;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 
 public class AlertBox {
 	
@@ -20,13 +25,9 @@ public class AlertBox {
 		Button closeButton = new Button("Close the Window");
 		closeButton.setOnAction(e -> window.close());
 		
-		VBox layout = new VBox(10);
-		layout.getChildren().addAll(label, closeButton);
-		layout.setAlignment(Pos.CENTER);
 		
-		Scene scene = new Scene(layout);
-		window.setScene(scene);
-		window.showAndWait();
+		
+		
 		
 	}
 }

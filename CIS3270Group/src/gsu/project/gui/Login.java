@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import gsu.project.bizlogic.*;
 import gsu.project.database.*;
+import javafx.scene.image.*;
 
 
 
@@ -76,6 +77,8 @@ public class Login extends Application {
 		
 		
 		primaryStage.setScene(scene);
+		Image iconBox = new Image("FlightPlane.png");
+		primaryStage.getIcons().add(iconBox);
 		primaryStage.show();
 		
 		signUp.setOnAction(e -> {
@@ -113,7 +116,7 @@ public class Login extends Application {
 							currentCustomer.getSecurityAnswer());
 					
 					
-					AdminGUI adminScreen = new AdminGUI();
+					AdminController adminScreen = new AdminController();
 					try {
 						adminScreen.start(primaryStage); 
 						
