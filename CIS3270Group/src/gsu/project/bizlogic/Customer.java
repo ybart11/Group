@@ -59,13 +59,11 @@ public class Customer implements Comparable <Customer> {
 
 		int id = makeCustomerID();
 
-		Customer acct = new Customer(id, un, pword, fname, lname, address, state, email, zip, ssn, secQuestion, sa);
-
-		InsertDB input = new InsertDB();
+		Customer customer = new Customer(id, un, pword, fname, lname, address, state, email, zip, ssn, secQuestion, sa);
 		
-		InsertDB.insertCustomer(acct);
+		InsertDB.insertCustomer(customer);
 
-		input.insertCustomer(acct);
+		InsertDB.insertCustomer(customer);
 	}
 	
 	// generates a random account ID
