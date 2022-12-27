@@ -55,7 +55,7 @@ public class InsertDB {
 			
 		} catch (Exception e) {
 			
-			System.out.println("something messed up in database! :-(");
+			System.out.println("something messed up in database!");
 			e.printStackTrace();
 			success = false;
 		}
@@ -70,7 +70,7 @@ public class InsertDB {
 			Class.forName(driver); 
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword); 
 		 
-			String sqlQ = "INSERT INTO bookedflights(ticket_number,flight_number,account_id,flight_date,"
+			String sqlQ = "INSERT INTO bookedflights(ticket_number,flight_number, customer_id,flight_date,"
 					+ "flight_time,departCity,destinationCity,passenger_username,return_flight_Date)" 
 			+ " VALUES(?,?,?,?,?,?,?,?,?)";
 			
@@ -123,7 +123,7 @@ public class InsertDB {
 			Class.forName(driver); 
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword); 
 			
-			String sqlQuery = "INSERT INTO customer(account_id,username,password,firstname,lastname,address,"
+			String sqlQuery = "INSERT INTO customer(customer_id,username,password,firstname,lastname,address,"
 					+ "state,email,zipcode,ssn,security_q,security_a,is_Admin)" + " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			

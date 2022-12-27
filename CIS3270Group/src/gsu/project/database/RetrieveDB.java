@@ -39,7 +39,7 @@ public class RetrieveDB {
 
 			while (res.next()) {
 
-				customer.setCustomerId(res.getInt("account_id"));
+				customer.setCustomerId(res.getInt("customer_id"));
 				customer.setUserName(res.getString("username"));
 				customer.setPassword(res.getString("password"));
 				customer.setFirstName(res.getString("firstname"));
@@ -117,7 +117,7 @@ public class RetrieveDB {
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
 			
 			PreparedStatement ps = 
-					con.prepareStatement("SELECT * FROM bookedflights WHERE account_id=" + "'" + customer_id + "'");
+					con.prepareStatement("SELECT * FROM bookedflights WHERE customer_id=" + "'" + customer_id + "'");
 			
 			ResultSet res = ps.executeQuery();
 			
