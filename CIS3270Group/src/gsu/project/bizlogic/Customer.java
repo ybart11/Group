@@ -62,6 +62,8 @@ public class Customer implements Comparable <Customer> {
 		Customer acct = new Customer(id, un, pword, fname, lname, address, state, email, zip, ssn, secQuestion, sa);
 
 		InsertDB input = new InsertDB();
+		
+		InsertDB.insertCustomer(acct);
 
 		input.insertCustomer(acct);
 	}

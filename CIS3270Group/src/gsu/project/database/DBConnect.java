@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 public class DBConnect {
 	
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://localhost:3306/test";
-	private static final String usernameDB = "root";
-	private static final String passwordDB = "Georgiastate9";
+	private static final String URL = "jdbc:mysql://192.168.0.251:3306/airlinereservation";
+	private static final String usernameDB = "dba";
+	private static final String passwordDB = "messi10$";
 
 	public static void main(String[] args) {
 		
