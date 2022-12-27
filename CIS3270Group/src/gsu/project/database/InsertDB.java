@@ -123,7 +123,7 @@ public class InsertDB {
 			Class.forName(driver); 
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword); 
 			
-			String sqlQuery = "INSERT INTO account(account_id,username,password,firstname,lastname,address,"
+			String sqlQuery = "INSERT INTO customer(account_id,username,password,firstname,lastname,address,"
 					+ "state,email,zipcode,ssn,security_q,security_a,is_Admin)" + " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			

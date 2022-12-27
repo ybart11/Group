@@ -20,7 +20,7 @@ public class LoginDB {
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
 			
 			PreparedStatement ps = con
-					.prepareStatement("SELECT * FROM CUSTOMER WHERE username=" + "'" + username + "'");
+					.prepareStatement("SELECT * FROM customer WHERE username=" + "'" + username + "'");
 
 			ResultSet res = ps.executeQuery();
 			
@@ -52,7 +52,7 @@ public class LoginDB {
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
 			
 			PreparedStatement ps = 
-					con.prepareStatement("SELECT * FROM CUSTOMER WHERE username=" + "'" + email + "'");
+					con.prepareStatement("SELECT * FROM customer WHERE username=" + "'" + email + "'");
 		
 			ResultSet res = ps.executeQuery();
 			
@@ -89,7 +89,7 @@ public class LoginDB {
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
 			
 			PreparedStatement ps = con
-					.prepareStatement("SELECT * FROM CUSTOMER WHERE email=" + "'" + email + "'");
+					.prepareStatement("SELECT * FROM customer WHERE email=" + "'" + email + "'");
 			
 			ResultSet res = ps.executeQuery();
 			
