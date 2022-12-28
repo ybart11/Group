@@ -50,12 +50,14 @@ public class InsertDB {
 			
 			con.close();
 			
+			System.out.println("Flight insert success!");
+			
 			success = true;
 
 			
 		} catch (Exception e) {
 			
-			System.out.println("something messed up in database!");
+			System.out.println("Flight insert failed!");
 			e.printStackTrace();
 			success = false;
 		}
@@ -146,7 +148,7 @@ public class InsertDB {
 			ps.executeUpdate();
 			
 			con.close();
-			
+			System.out.println("Insert success!");
 			success = true;
 			
 		} catch (SQLIntegrityConstraintViolationException ex) {
