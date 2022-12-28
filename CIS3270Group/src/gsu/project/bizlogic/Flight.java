@@ -144,7 +144,8 @@ public class Flight implements Comparable <Flight> {
 	@Override
 	public String toString () {
 		return "\nFlight number: " + getFlightNum() + "\nDeparture time: " + getDepartTime()
-		+ "\nArrive time: " + getArriveTime() + "\nDeparture City: " + getDepartureCity() + "\nDestination City: " + getDestinationCity();
+		+ "\nArrive time: " + getArriveTime() + "\nDeparture City: " + getDepartureCity() 
+		+ "\nDestination City: " + getDestinationCity() + "\nNumber of seats: " + this.getNumOfSeats();
 	}
 
 	@Override

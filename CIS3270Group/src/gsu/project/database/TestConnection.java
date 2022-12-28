@@ -9,7 +9,7 @@ public class TestConnection {
 	public static void main(String[] args) {
 		
 		// Retrieve a flight using flight_number
-		//RetrieveDB.retrieveFlight(123);
+		//RetrieveDB.retrieveFlight(504);
 		
 		// Retrieve a customer using username
 		//RetrieveDB.retrieveCustomer("yovanybartolome");
