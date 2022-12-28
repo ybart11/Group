@@ -28,6 +28,8 @@ public class UpdateDB {
 			// ps.setInt(1, flightNum);
 			
 			ps.executeUpdate();
+			
+			System.out.println("Flight deleted successfully!");
 		
 			con.close();
 			

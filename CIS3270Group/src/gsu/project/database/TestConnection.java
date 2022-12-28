@@ -18,7 +18,7 @@ public class TestConnection {
 		// Add a flight using object
 		
 		// Delete a flight using flight_number 126 
-		//UpdateDB.deleteFlight(126);
+		UpdateDB.deleteFlight(723);
 		
 
 		
