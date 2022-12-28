@@ -9,6 +9,7 @@ public class LoginDB {
 	static final String databaseUsername = "dba";
 	static final String databasePassword = "messi10$";
 	
+	// Self note: Match to gui but works good
 	public String loginConn (String username) {
 		
 		String result = "";
@@ -27,13 +28,14 @@ public class LoginDB {
 			if (res.next()) {
 				
 				result = res.getString("password");
+				System.out.println("Password: " + result);
 			}
 			
 			con.close();
 			
 		} catch (SQLException | ClassNotFoundException ex) {
 			
-			System.out.println("Something went wrong with the database :(");
+			System.out.println("Something went wrong with the database");
 			ex.printStackTrace();
 			
 		}
@@ -41,6 +43,7 @@ public class LoginDB {
 		return result;
 	}
 	
+	// Self note: Could be changed to return something else but works good 
 	public Boolean searchFor (String email) {
 		
 		Boolean result = false; 
@@ -52,12 +55,13 @@ public class LoginDB {
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
 			
 			PreparedStatement ps = 
-					con.prepareStatement("SELECT * FROM customer WHERE username=" + "'" + email + "'");
+					con.prepareStatement("SELECT * FROM customer WHERE email=" + "'" + email + "'");
 		
 			ResultSet res = ps.executeQuery();
 			
 			if (res.next()) {
 				check = res.getInt("ssn");
+				System.out.println("ssn: " + check);
 			}
 
 		} catch (Exception ex) {
@@ -76,6 +80,7 @@ public class LoginDB {
 		return result;
 	}
 	
+	// Self note: Needs debugging
 	public String returnPassword (String email, String security_A) {
 		
 		String result = "";
@@ -97,7 +102,7 @@ public class LoginDB {
 				pword = res.getString("password");
 				correctAns = res.getString("security_a");
 				
-				System.out.println(pword + correctAns);
+				System.out.println("Password: " + pword + "\nCorrect answer: " + correctAns);
 			} 
 			
 			else if (userAns.equals(correctAns)) {
@@ -105,10 +110,13 @@ public class LoginDB {
 			}
 			
 			else {
+				
 				result = "I'm sorry we dont have an account with that email address";
+				
 
 			}
 			
+			System.out.println(result);
 			con.close();
 		} catch (Exception ex) {
 

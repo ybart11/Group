@@ -20,7 +20,16 @@ public class TestConnection {
 		// Delete a flight using flight_number 126 
 		//UpdateDB.deleteFlight(723);
 		
-		RetrieveDB.getFlights();
+		//RetrieveDB.getFlights();
+		
+		//LoginDB user = new LoginDB ();
+		//user.loginConn("chefcurry");
+		
+		//user.searchFor("johncena@gmail.com");
+		
+		//user.returnPassword(" ", "red");
+		
+		
 		
 
 		
