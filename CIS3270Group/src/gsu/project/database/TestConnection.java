@@ -40,20 +40,7 @@ public class TestConnection {
 //		
 		//UpdateDB.deleteCustomer("Yovany");
 		
-		RetrieveDB.retrieveCustomer("yovanyb");
-		
-		
-		
-		
-		
-		
-		
 
-		
-	
-		
-		
-		
 		
 		
 		
