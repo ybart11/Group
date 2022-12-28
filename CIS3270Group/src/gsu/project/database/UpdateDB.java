@@ -12,6 +12,7 @@ public class UpdateDB {
 	
 	public static Boolean result; 
 	
+	// Self note: tested successfully
 	public static void deleteFlight(int flightNum) {
 		
 		result = false; 

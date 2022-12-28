@@ -12,7 +12,7 @@ public class TestConnection {
 		//RetrieveDB.retrieveFlight(504);
 		
 		// Retrieve a customer using username
-		//RetrieveDB.retrieveCustomer("yovanybartolome");
+		//RetrieveDB.retrieveCustomer("yovanyba");
 		
 		
 		// Add a flight using object

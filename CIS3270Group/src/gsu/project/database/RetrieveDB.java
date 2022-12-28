@@ -36,6 +36,7 @@ public class RetrieveDB {
 					con.prepareStatement("SELECT * FROM customer WHERE username=" + "'" + un + "'");
 
 			ResultSet res = preparedStatement.executeQuery();
+		
 
 			while (res.next()) {
 
@@ -55,6 +56,12 @@ public class RetrieveDB {
 				System.out.println(customer.toString());
 
 			}
+			
+			// Checks if username exists
+			if (!res.isBeforeFirst()) {
+				System.out.println("Username does not exist");
+			}
+			
 			con.close();
 
 		} catch (Exception e) {
@@ -165,6 +172,10 @@ public class RetrieveDB {
 			
 			ResultSet rs = ps.executeQuery();
 			
+			// Checks if flight exists
+			if (!rs.isBeforeFirst()) {
+				System.out.println("Flight does not exist");
+			}
 			
 			while (rs.next()) {
 
