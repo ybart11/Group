@@ -77,6 +77,38 @@ public class UpdateDB {
 		
 	}
 	
+	public static void deleteCustomer(String un) {
+		
+		result = false; 
+		
+		try {
+			
+			Class.forName(driver);
+
+			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
+			
+			PreparedStatement ps = 
+					con.prepareStatement("DELETE FROM customer WHERE username=" + "'" + un + "'");
+
+			// ps.setString(1, getUserName());
+			
+			ps.executeUpdate();
+			
+			System.out.println("Customer deleted successfully!");
+		
+			con.close();
+			
+			result = true;
+			
+		} catch (Exception e1) {
+			
+			e1.printStackTrace();
+			result = false;
+		
+		}
+		
+	}
+	
 	
 	
 	

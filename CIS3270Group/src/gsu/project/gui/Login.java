@@ -110,9 +110,9 @@ public class Login extends Application {
 					
 					// possible error with link to Customer
 					currentCustomer = new Admin(currentCustomer.getCustomerId(),currentCustomer.getUserName()
-							,currentCustomer.getPassword(), currentCustomer.getFirstName(), currentCustomer.getZip(),
+							,currentCustomer.getPassword(), currentCustomer.getFirstName(), currentCustomer.getLastName(),
 							currentCustomer.getAddress(),currentCustomer.getState() , currentCustomer.getEmail(),
-							currentCustomer.getLastName(), currentCustomer.getSsn(),currentCustomer.getSecurityQuestion(),
+							currentCustomer.getZip(), currentCustomer.getSsn(),currentCustomer.getSecurityQuestion(),
 							currentCustomer.getSecurityAnswer());
 					
 					
