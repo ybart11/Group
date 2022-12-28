@@ -45,6 +45,7 @@ public class UpdateDB {
 		
 	}
 	
+	// Add if statement that checks if ticket number even exists
 	public static void deleteBooking(int ticketNumber) {
 		
 		result = false;

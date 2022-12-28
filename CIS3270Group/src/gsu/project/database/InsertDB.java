@@ -23,6 +23,7 @@ public class InsertDB {
 	public ArrayList <Object> returnList;
 	
 	// Query to insert a new flight into the database 
+	// Self note: Tested successfully
 	public static void insertFlight (Flight flight) {
 		
 		success = false; 
@@ -116,7 +117,7 @@ public class InsertDB {
 		}
 	}
 	
-	
+	// Self note: Tested successfully
 	public static void insertCustomer (Customer customer) {
 		
 		success = false; 
