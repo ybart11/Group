@@ -51,6 +51,8 @@ public class RetrieveDB {
 				customer.setSsn(res.getInt("ssn"));
 				customer.setSecurityQuestion(res.getString("security_q"));
 				customer.setSecurityAnswer(res.getString("security_a"));
+				
+				System.out.println(customer.toString());
 
 			}
 			con.close();

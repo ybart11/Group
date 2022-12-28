@@ -46,9 +46,12 @@ public class Flight implements Comparable <Flight> {
 		InsertDB.insertFlight(flight);
 		
 	 	if(InsertDB.success) {
+	 		System.out.println("Flight successfully inserted!");
+
 	 		AlertBox.display("Flight Created", "You created new flight. Flight Number is: " + id);
 	 	} 
 	 	else {
+	 		System.out.println("Flight failed to insert!");
 	 		AlertBox.display("Alert!!!!", "Something went wrong please check the fields and try again");
 	 	}
 	}
@@ -141,7 +144,7 @@ public class Flight implements Comparable <Flight> {
 	@Override
 	public String toString () {
 		return "\nFlight number: " + getFlightNum() + "\nDeparture time: " + getDepartTime()
-		+ "\nDeparture City: " + getDepartureCity() + "\nDestination City: " + getDestinationCity();
+		+ "\nArrive time: " + getArriveTime() + "\nDeparture City: " + getDepartureCity() + "\nDestination City: " + getDestinationCity();
 	}
 
 	@Override
