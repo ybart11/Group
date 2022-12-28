@@ -22,6 +22,7 @@ public class RetrieveDB {
 	
 	
 	// Get a customer from the database 
+	// Self note: Tested successfully
 	public static Customer retrieveCustomer (String un) {
 		Customer customer = new Customer ();
 		
@@ -73,6 +74,7 @@ public class RetrieveDB {
 		
 	}
 	
+	// Self note: Tested successfully
 	public static ObservableList<Flight> getFlights() {
 		
 		 ObservableList<Flight> flights = FXCollections.observableArrayList();
@@ -157,6 +159,7 @@ public class RetrieveDB {
 
 		 }
 	
+	// Self note: Tested successfully
 	public static Flight retrieveFlight(int flightnum) {
 		
 		Flight flight = new Flight ();

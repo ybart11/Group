@@ -1,5 +1,6 @@
 package gsu.project.bizlogic;
 
+
 import gsu.project.database.LoginDB;
 
 // Class that logs in to database 
