@@ -62,6 +62,8 @@ public class UpdateDB {
 			
 			con.close();
 			
+			System.out.println("Booked flight deleted successfully");
+			
 			result = true;
 			
 		} catch (Exception e1) {

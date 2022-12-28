@@ -102,8 +102,8 @@ public class RetrieveDB {
 			// Close connection
 			con.close();
 			
-		 } catch (Exception e1) {
-			 e1.printStackTrace();
+		 } catch (Exception e) {
+			 e.printStackTrace();
 		 }
 		 
 		 return flights;
@@ -140,9 +140,9 @@ public class RetrieveDB {
 			
 				con.close();
 			
-			} catch (Exception e1) {
+			} catch (Exception e) {
 				
-				e1.printStackTrace();
+				e.printStackTrace();
 				
 			}
 			
@@ -184,8 +184,8 @@ public class RetrieveDB {
 			
 			
 
-		} catch (Exception e1) {
-			e1.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		
 		return flight;
