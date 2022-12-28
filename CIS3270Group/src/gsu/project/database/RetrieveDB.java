@@ -95,6 +95,8 @@ public class RetrieveDB {
 				flight.setNumOfSeats(rs.getInt("num_seats"));
 				
 				flights.add(flight);
+				
+				System.out.println(flight.toString());
 			}
 			
 			// Close connection
@@ -174,6 +176,9 @@ public class RetrieveDB {
 				flight.setFlightDate(rs.getString("flight_date"));
 				flight.setReturnFlight(rs.getString("return_day"));
 				flight.setNumOfSeats(rs.getInt("num_seats"));
+				
+				System.out.println(flight.toString());
+
 
 			}
 			
