@@ -2,7 +2,7 @@ package gsu.project.database;
 
 import java.sql.SQLException;
 
-import gsu.project.bizlogic.Flight;
+import gsu.project.bizlogic.*;
 
 public class TestConnection {
 
@@ -29,14 +29,18 @@ public class TestConnection {
 		
 		//user.returnPassword(" ", "red");
 		
-		
+//		
+//		
+//		Admin admin = new Admin (Admin.makeCustomerID(), "yovanyb", "Password123", "Yovany", "Bartolome", "123 Main Street", 
+//				"Virgina", "yovanyb@gmail.com", 123, 123, "Favorite color?", "red");
+//		Admin.isAdmin;
+//		
+//		
+//		InsertDB.insertCustomer(admin);
+//		
+		//UpdateDB.deleteCustomer("Yovany");
 		
 
-		
-	
-		
-		
-		
 		
 		
 		

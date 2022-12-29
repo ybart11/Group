@@ -8,9 +8,9 @@ public class Admin extends Customer {
 		super(userName, password);
 	}
 
-	public Admin(int customerID, String firstName, String lastName, String address, int zip, String state,
-			String userName, String password, String email, int ssn, String securityQuestion, String securityAnswer) {
-		super(firstName, lastName);
+	public Admin(int customerID, String userName, String password ,String firstName, String lastName, String address, String state, 
+		 String email, int zip, int ssn, String securityQuestion, String securityAnswer) {
+		super(customerID, userName, password, firstName, lastName, address, state, email, zip, ssn, securityQuestion, securityAnswer);
 
 	}
 	

@@ -37,6 +37,11 @@ public class RetrieveDB {
 					con.prepareStatement("SELECT * FROM customer WHERE username=" + "'" + un + "'");
 
 			ResultSet res = preparedStatement.executeQuery();
+			
+			// Checks if username exists
+			if (!res.isBeforeFirst()) {
+				System.out.println("Username does not exist");
+			}
 		
 
 			while (res.next()) {
@@ -58,10 +63,6 @@ public class RetrieveDB {
 
 			}
 			
-			// Checks if username exists
-			if (!res.isBeforeFirst()) {
-				System.out.println("Username does not exist");
-			}
 			
 			con.close();
 
