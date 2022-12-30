@@ -59,7 +59,7 @@ public class RetrieveDB {
 				customer.setSecurityQuestion(res.getString("security_q"));
 				customer.setSecurityAnswer(res.getString("security_a"));
 				
-				System.out.println(customer.toString());
+				//System.out.println(customer.toString());
 
 			}
 			
@@ -106,7 +106,7 @@ public class RetrieveDB {
 				
 				flights.add(flight);
 				
-				System.out.println(flight.toString());
+				//System.out.println(flight.toString());
 			}
 			
 			// Close connection
@@ -192,7 +192,7 @@ public class RetrieveDB {
 				flight.setReturnFlight(rs.getString("return_day"));
 				flight.setNumOfSeats(rs.getInt("num_seats"));
 				
-				System.out.println(flight.toString());
+				//System.out.println(flight.toString());
 
 
 			}

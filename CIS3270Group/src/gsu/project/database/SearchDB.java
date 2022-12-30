@@ -51,6 +51,8 @@ public class SearchDB {
 				
 				flights.add(flight);
 				
+				System.out.println(flights.toString());
+				
 				
 			}
 			
