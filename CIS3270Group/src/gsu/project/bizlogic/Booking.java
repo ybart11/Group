@@ -53,7 +53,11 @@ public class Booking extends Login {
 		
 		Flight toBook = RetrieveDB.retrieveFlight(flightNumber);
 		
-		Booking booking = new Booking();
+		Booking booking = new Booking(ticketNum, Login.currentCustomer.getCustomerId(), flightNumber, 
+				toBook.getFlightDate(), toBook.getDepartTime(), toBook.getDepartureCity(), toBook.getDestinationCity(),
+				toBook.getReturnFlight(), Login.currentCustomer.getUserName());
+		
+		InsertDB.insertBooking(booking); 
 	}
 
 	public int getTicketNum() {
