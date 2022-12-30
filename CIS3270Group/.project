@@ -10,21 +10,15 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.m2e.core.maven2Builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 	<linkedResources>
 		<link>
 			<name>src/gsu/project/gui/FlightPlane.png</name>
 			<type>1</type>
-			<location>C:/Users/yovany_23/eclipse/java-2022-06/Eclipse.app/Contents/MacOS/C::/Users/p2sca/OneDrive/Desktop/Work/FlightPlane.png</location>
+			<location>/Users/yovany_23/eclipse/java-2022-06/Eclipse.app/Contents/MacOS/C::/Users/yovany_23/eclipse/java-2022-06/Eclipse.app/Contents/MacOS/C::/Users/p2sca/OneDrive/Desktop/Work/FlightPlane.png</location>
 		</link>
 	</linkedResources>
 </projectDescription>
