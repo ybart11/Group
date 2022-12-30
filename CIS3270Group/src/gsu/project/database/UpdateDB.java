@@ -24,13 +24,13 @@ public class UpdateDB {
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
 			
 			PreparedStatement ps = 
-					con.prepareStatement("DELETE FROM flights WHERE flight_number=" + "'" + flightNum + "'");
+					con.prepareStatement("DELETE FROM flights WHERE flight_number = ?");
 
-			// ps.setInt(1, flightNum);
+			ps.setInt(1, flightNum);
 			
 			ps.executeUpdate();
 			
-			System.out.println("Flight deleted successfully!");
+			System.out.println("\nFlight deleted successfully!");
 		
 			con.close();
 			
@@ -49,6 +49,7 @@ public class UpdateDB {
 	public static void deleteBooking(int ticketNumber) {
 		
 		result = false;
+		
 		try {
 
 			Class.forName(driver);
