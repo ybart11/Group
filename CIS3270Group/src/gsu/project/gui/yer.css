@@ -1,0 +1,51 @@
+.root{
+
+	-fx-background-color: #fafeff;
+	-fx-font-size: 12pt;
+	
+
+}
+
+.label{
+
+    -fx-text-fill: #080a0a;
+    -fx-font-weight: bold;
+    
+
+}
+
+.button{
+
+	-fx-background-color: #578bd9;
+
+	-fx-text-fill: #282828;
+
+	-fx-background-radius:4;
+
+}
+
+.table{
+
+	-fx-background-color:#fafeff;
+
+}
+
+.alertbox{
+
+	-fx-background-color:#fafeff;
+	
+	
+
+}
+
+#pane{
+
+    -fx-background-image: url("plane.png");
+
+    -fx-background-repeat: stretch;   
+
+    -fx-background-size: 900 506;
+
+    -fx-background-position: center center;
+
+ }
