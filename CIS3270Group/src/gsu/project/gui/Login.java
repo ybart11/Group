@@ -1,6 +1,6 @@
 package gsu.project.gui;
 
-// #2
+
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

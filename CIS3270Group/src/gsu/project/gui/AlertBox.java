@@ -1,6 +1,5 @@
 package gsu.project.gui;
 
-//2
 
 import javafx.stage.*;
 import javafx.scene.*;
