@@ -8,8 +8,8 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 import gsu.project.bizlogic.Customer;
 import gsu.project.bizlogic.Flight;
+import gsu.project.gui.usingSceneBuilder.AlertBox;
 import gsu.project.bizlogic.Booking;
-import gsu.project.gui.AlertBox;
 
 
 public class InsertDB {

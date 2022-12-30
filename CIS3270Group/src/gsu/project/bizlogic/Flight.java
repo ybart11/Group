@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import gsu.project.database.InsertDB;
 import gsu.project.gui.*;
+import gsu.project.gui.usingSceneBuilder.AlertBox;
 
 
 public class Flight implements Comparable <Flight> {

@@ -2,8 +2,8 @@ package gsu.project.bizlogic;
 
 import java.util.Random;
 import gsu.project.database.RetrieveDB;
+import gsu.project.gui.usingSceneBuilder.Login;
 import gsu.project.database.InsertDB;
-import gsu.project.gui.Login;
 
 public class Booking extends Login {
 	

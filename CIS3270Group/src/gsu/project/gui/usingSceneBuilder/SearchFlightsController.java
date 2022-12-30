@@ -1,4 +1,4 @@
-package gsu.project.gui;
+package gsu.project.gui.usingSceneBuilder;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -22,7 +22,7 @@ import java.time.LocalDate;
 
 import gsu.project.bizlogic.Admin;
 import gsu.project.bizlogic.Flight;
-import gsu.project.gui.Login;
+import gsu.project.gui.usingSceneBuilder.Login;
 
 public class SearchFlights extends Application {
 	
