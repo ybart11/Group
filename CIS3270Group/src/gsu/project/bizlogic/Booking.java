@@ -21,7 +21,7 @@ public class Booking extends Login {
 	public Booking() {}
 
 	public Booking(int ticketNum, int customerID, int flightNumber, String flightDate, String flightTime,
-			String deptCity, String desCity, String returnFlight) {
+			String deptCity, String desCity, String returnFlight, String passenger_userName) {
 		
 		this.ticketNum = ticketNum;
 		this.customerID = customerID;
@@ -31,6 +31,7 @@ public class Booking extends Login {
 		this.deptCity = deptCity;
 		this.desCity = desCity;
 		this.returnFlight = returnFlight;
+		this.passenger_userName = passenger_userName;
 	}
 
 	public Booking(int ticketNum, int flightNumber, String flightDate, String flightTime, String deptCity,
