@@ -54,7 +54,7 @@ public class Customer implements Comparable <Customer> {
 	}
 	
 	// Create generateAccount method 
-	public static void generateAccount(String fname, String lname, String address, String email, String state, int zip,
+	public static void generateCustomer(String fname, String lname, String address, String email, String state, int zip,
 			int ssn, String un, String pword, String secQuestion, String sa) {
 
 		int id = makeCustomerID();
