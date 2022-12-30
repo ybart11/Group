@@ -149,20 +149,26 @@ public class InsertDB {
 			ps.executeUpdate();
 			
 			con.close();
-			System.out.println("Insert success!");
+			
+			//System.out.println("Insert success!");
+			
 			success = true;
 			
 		} catch (SQLIntegrityConstraintViolationException ex) {
+			
 			AlertBox.display("Duplicate Account Alert!", "We have an account already with your email address" 
 					+ "\nPlease try again or use our password recovery system");
 			
 			success = false;
 			
 		} catch (SQLException e1) {
+			
 			e1.printStackTrace();
 			
 		} catch (ClassNotFoundException e2) {
-			System.out.println("something messed up in database! :-(");
+			
+			System.out.println("Something messed up in database!");
+			
 			e2.printStackTrace();
 		}
 	}
