@@ -17,7 +17,7 @@ import java.io.IOException;
 import gsu.project.bizlogic.*;
 import gsu.project.database.*;
 
-public class Registration extends Application {
+public class RegistrationController extends Application {
 	
 	@FXML
 	

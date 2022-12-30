@@ -81,17 +81,17 @@ public class Login extends Application {
 		primaryStage.getIcons().add(iconBox);
 		primaryStage.show();
 		
-		signUp.setOnAction(e -> {
-			
-			Registration register = new Registration();
-			
-			try {
-					register.start(primaryStage);
-			} catch (Exception e1) {
-				
-				e1.printStackTrace();
-			}
-		});
+//		signUp.setOnAction(e -> {
+//			
+//			Registration register = new Registration();
+//			
+//			try {
+//					register.start(primaryStage);
+//			} catch (Exception e1) {
+//				
+//				e1.printStackTrace();
+//			}
+//		});
 		
 		login.setOnAction(e -> { 
 			
