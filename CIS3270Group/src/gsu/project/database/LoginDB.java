@@ -28,7 +28,7 @@ public class LoginDB {
 			if (res.next()) {
 				
 				result = res.getString("password");
-				System.out.println("Password: " + result);
+				//System.out.println("Password: " + result);
 			}
 			
 			con.close();
@@ -81,6 +81,7 @@ public class LoginDB {
 	}
 	
 	// Self note: Needs debugging
+	// Use for forgot password button 
 	public String returnPassword (String email, String security_A) {
 		
 		String result = "";
@@ -106,18 +107,22 @@ public class LoginDB {
 			} 
 			
 			else if (userAns.equals(correctAns)) {
+				
 				result = "Your password is: "  + pword;
+				
 			}
 			
 			else {
 				
-				result = "I'm sorry we dont have an account with that email address";
+				result = "I'm sorry we don't have an account with that email address";
 				
 
 			}
 			
 			System.out.println(result);
+			
 			con.close();
+			
 		} catch (Exception ex) {
 
 			ex.printStackTrace();
