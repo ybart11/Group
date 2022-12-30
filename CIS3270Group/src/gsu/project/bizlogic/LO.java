@@ -42,7 +42,8 @@ public class LO {
 	
 	public Boolean executeLogin() {
 		
-		LoginDB log = new LoginDB();
+		LoginDB log = new LoginDB(); 
+		
 		String check = log.loginConn(getUsername());
 		
 		checkPassword(check);
