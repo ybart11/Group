@@ -83,8 +83,21 @@ public class RecoverPassword extends Application {
 		scene.getStylesheets().add("graphicUserInterface/thing.css");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-	
-	
-	
+		
+		passwordRetrieve.setOnAction( e -> {
+			String emailOne = emailInput.getText();
+			String emailTwo = confirmEmailInput.getText();
+			String answer = securityAnswerInput.getText();
+			
+			try {
+				
+				
+				
+			} catch (Exception ex) {
+				AlertBox.display("Alert", "The email address do not match!");
+			}
+			
+		});
 }
+
 }
