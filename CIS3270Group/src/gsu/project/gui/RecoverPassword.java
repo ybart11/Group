@@ -93,11 +93,22 @@ public class RecoverPassword extends Application {
 				
 				
 				
+				
 			} catch (Exception ex) {
 				AlertBox.display("Alert", "The email address do not match!");
 			}
 			
 		});
 }
+	
+	public void checkEmailMatch (String email, String email2) throws Exception {
+		
+		int i = email.compareTo(email2);
+		
+		if (i > 0 || i < 0) {
+			throw new Exception ("Email Address don't match");
+		}
+		
+	}
 
 }
