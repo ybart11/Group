@@ -90,7 +90,14 @@ public class RecoverPassword extends Application {
 			String answer = securityAnswerInput.getText();
 			
 			try {
+				checkEmailMatch (emailOne, emailTwo);
 				
+				LoginDB check = new LoginDB();
+				
+				// Change to be user name instead of email
+				String display = check.returnPassword(emailOne, answer);
+				
+				AlertBox.display("Attention", display);
 				
 				
 				
@@ -99,6 +106,7 @@ public class RecoverPassword extends Application {
 			}
 			
 		});
+	
 }
 	
 	public void checkEmailMatch (String email, String email2) throws Exception {
