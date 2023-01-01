@@ -106,6 +106,19 @@ public class RecoverPassword extends Application {
 			}
 			
 		});
+		
+		backButton.setOnAction( e -> {
+			
+			Login login = new Login ();
+			
+			try {
+				login.start(primaryStage);
+				
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+			
+		});
 	
 }
 	
