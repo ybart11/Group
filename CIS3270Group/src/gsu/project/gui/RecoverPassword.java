@@ -1,5 +1,7 @@
 package gsu.project.gui;
 
+//1
+
 import javafx.stage.Stage;
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -13,7 +15,7 @@ import gsu.project.database.*;
 
 public class RecoverPassword extends Application {
 
-	GridPane pane;
+	GridPane grid;
 	Scene scene;
 	Label email;
 	TextField emailInput;
@@ -21,9 +23,9 @@ public class RecoverPassword extends Application {
 	TextField confirmEmailInput;
 	Label securityQuestion;
 	Label securityAnswer;
-	TextField securityInput;
+	TextField securityAnswerInput;
 	Button passwordRetrieve;
-	Button back;
+	Button backButton;
 	Label displayPassword;
 	Label wrongPassword;
 	
@@ -34,52 +36,53 @@ public class RecoverPassword extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-	pane = new GridPane();
-	pane.setAlignment(Pos.CENTER);
-	
-	email = new Label(" Enter your email ");
+		grid = new GridPane();
+		grid.setAlignment(Pos.CENTER);
+		
+		email = new Label(" Enter your email ");
 		GridPane.setConstraints(email, 0, 0);
 		emailInput = new TextField();
-		emailInput.setPromptText("Email");
+		emailInput.setPromptText(" Email ");
 		GridPane.setConstraints(emailInput, 0, 1);
-	
-	confirmEmail = new Label("Confirm your email");
-		GridPane.setConstraints(email, 0, 0);
 		
-	confirmEmailInput = new TextField();
-		confirmEmailInput .setPromptText("Email:");
+		confirmEmail = new Label(" Confrim your email ");
+		GridPane.setConstraints(confirmEmail, 0, 2);
+		confirmEmailInput = new TextField();
+		confirmEmailInput.setPromptText(" Email ");
 		GridPane.setConstraints(confirmEmailInput, 0, 3);
 		
-	securityQuestion = new Label("Choose a security question");
-	GridPane.setConstraints(securityQuestion, 0, 4);
+		securityQuestion = new Label(" Choose Security Question");
+		GridPane.setConstraints(securityQuestion, 0, 4);
+		
+		ChoiceBox<String> choicebox = new ChoiceBox<>();
+		GridPane.setConstraints(choicebox, 0, 5);
+		
+		choicebox.getItems().add("What is your favorite color?");
 	
-	ChoiceBox<String> choiceBox = new ChoiceBox<>();
-	GridPane.setConstraints(choiceBox, 0, 5);
-	
-	choiceBox.getItems().add("What is your Mother's Maiden Name?");
-	choiceBox.getItems().add("What is your middle name?");
-	choiceBox.getItems().add("What is your first?");
-	choiceBox.getItems().add("Who was your 5th Grade teacher?");
-	
-	securityAnswer = new Label("Enter your answer");
-	GridPane.setConstraints(securityAnswer, 0, 6);
-	securityInput = new TextField();
-	securityInput.setPromptText("Answer: ");
-	GridPane.setConstraints(securityInput, 0, 7);
-	
-	passwordRetrieve = new Button("Retrieve Password");
-	GridPane.setConstraints(passwordRetrieve, 0, 8);
-	
-	displayPassword = new Label();
-	GridPane.setConstraints(displayPassword, 1, 0);
-	
-	pane.getChildren().addAll(email,emailInput, confirmEmail, confirmEmailInput, securityQuestion,
-			choiceBox, securityAnswer, securityInput, passwordRetrieve, back);
-	
-	scene = new Scene(pane, 600, 600);
-	primaryStage.setTitle("Recover Password");
-	primaryStage.setScene(scene);
-	primaryStage.show();
+		securityAnswer = new Label(" Enter your Answer ");
+		GridPane.setConstraints(securityAnswer, 0, 6);
+		securityAnswerInput = new TextField();
+		securityAnswerInput.setPromptText(" Answer:");
+		GridPane.setConstraints(securityAnswerInput, 0, 7);
+
+	    passwordRetrieve = new Button(" Retrieve Password ");
+		GridPane.setConstraints(passwordRetrieve, 0, 8);
+		
+		backButton = new Button(" <-Back ");
+		GridPane.setConstraints(backButton, 0, 9);
+		
+		displayPassword = new Label();
+		GridPane.setConstraints(displayPassword, 1, 0);
+
+	    
+		grid.getChildren().addAll(email, emailInput, confirmEmail, confirmEmailInput, securityQuestion,
+				                  choicebox,securityAnswer, securityAnswerInput, passwordRetrieve, backButton);
+		
+		scene = new Scene(grid, 600,600);
+		primaryStage.setTitle("Password Recover");
+		scene.getStylesheets().add("graphicUserInterface/thing.css");
+		primaryStage.setScene(scene);
+		primaryStage.show();
 	
 	
 	
