@@ -80,8 +80,8 @@ public class LoginDB {
 		return result;
 	}
 	
-	// Self note: Needs debugging
-	// Use for forgot password button 
+	// Use for forgot password button
+	// Tested successfully
 	public String returnPassword (String username, String security_A) {
 		
 		String result = "";
@@ -105,6 +105,12 @@ public class LoginDB {
 				
 				System.out.println("Password: " + pword + "\nCorrect answer: " + correctAns);
 			} 
+			
+			if (!userAns.equals(correctAns)) {
+				
+				result = "Incorrect answer to security question";
+				
+			}
 			
 			else if (userAns.equals(correctAns)) {
 				

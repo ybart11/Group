@@ -84,7 +84,7 @@ public class AdminGUI extends Application {
 
 		backButton = new Button("<-Back ");
 
-		Label booked = new Label("All Flights:");
+		Label booked = new Label("All Flights");
 		BorderPane.setAlignment(booked, Pos.CENTER);
 
 		Button logout = new Button("Log Out");
@@ -111,10 +111,10 @@ public class AdminGUI extends Application {
 		
 		myFlights.setOnAction(e->{
 			
-			MainMenu adm = new MainMenu();
+			MainMenu admin = new MainMenu();
 			
 			try {
-				adm.start(primaryStage);
+				admin.start(primaryStage);
 				
 			}catch(Exception e2) {
 				
