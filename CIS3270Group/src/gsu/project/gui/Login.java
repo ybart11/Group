@@ -159,7 +159,7 @@ public class Login extends Application {
 			
 		});
 		
-		// Need to look over
+		// Success
 		forgotPassword.setOnAction(e -> { 
 			
 			RecoverPassword passRecovery = new RecoverPassword();
