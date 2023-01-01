@@ -60,6 +60,11 @@ public class RecoverPassword extends Application {
 			GridPane.setConstraints(choicebox, 0, 5);
 			
 			choicebox.getItems().add("What is your favorite color?");
+			choicebox.getItems().add("What is your favorite number?");
+			choicebox.getItems().add("What is your middle name?");
+
+
+			
 		
 			securityAnswer = new Label(" Enter your Answer ");
 			GridPane.setConstraints(securityAnswer, 0, 6);
