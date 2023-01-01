@@ -34,9 +34,9 @@ public class SplashScreen extends Application {
 			
 			hbox = new HBox();
 			
-			hbox.setPadding(new Insets(200, 200, 200, 200));
+			hbox.setPadding(new Insets(200, 100, 200, 150));
 			
-			FadeTransition fadeTransition = new FadeTransition(Duration.millis(5000), hbox);
+			FadeTransition fadeTransition = new FadeTransition(Duration.millis(2750), hbox);
 			fadeTransition.setFromValue(1.0);
 			fadeTransition.setToValue(0.0);
 			fadeTransition.setCycleCount(1);
@@ -59,15 +59,16 @@ public class SplashScreen extends Application {
 
 			
 				Text splashText = new Text(1000, 1000, "Welcome to PantherAir");
+	
 			
-			splashText.setFill(Color.WHITE);
-			splashText.setFont(Font.font(java.awt.Font.SERIF, 35));
+			splashText.setFill(Color.BLACK);
+			splashText.setFont(new Font("Arial", 30));
 			
 			
 			hbox.getChildren().addAll(splashText);
 			
 			
-			Scene scene = new Scene(hbox, 700, 550, Color.BLACK);
+			Scene scene = new Scene(hbox, 600, 450, Color.WHITESMOKE);
 			
 			
 			primaryStage.setTitle("PantherAir");
