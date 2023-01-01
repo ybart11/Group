@@ -82,7 +82,7 @@ public class LoginDB {
 	
 	// Self note: Needs debugging
 	// Use for forgot password button 
-	public String returnPassword (String email, String security_A) {
+	public String returnPassword (String username, String security_A) {
 		
 		String result = "";
 		String correctAns = "";
@@ -95,7 +95,7 @@ public class LoginDB {
 			Connection con = DriverManager.getConnection(databaseURL, databaseUsername, databasePassword);
 			
 			PreparedStatement ps = con
-					.prepareStatement("SELECT * FROM customer WHERE email=" + "'" + email + "'");
+					.prepareStatement("SELECT * FROM customer WHERE username=" + "'" + username + "'");
 			
 			ResultSet res = ps.executeQuery();
 			
@@ -114,7 +114,7 @@ public class LoginDB {
 			
 			else {
 				
-				result = "I'm sorry we don't have an account with that email address";
+				result = "I'm sorry we don't have an account with that username";
 				
 
 			}
