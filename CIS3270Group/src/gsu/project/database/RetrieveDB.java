@@ -16,7 +16,7 @@ public class RetrieveDB {
 	
 	
 	static final String driver = "com.mysql.cj.jdbc.Driver";
-	static final String databaseURL = "jdbc:mysql://192.168.0.251:3306/airlinereservation";
+	static final String databaseURL = "jdbc:mysql://--/airlinereservation";
 	static final String databaseUsername = "dba";
 	static final String databasePassword = "messi10$";
 	

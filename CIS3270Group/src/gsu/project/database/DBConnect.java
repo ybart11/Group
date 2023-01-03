@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnect {
 	
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://192.168.0.251:3306/airlinereservation";
+	private static final String URL = "jdbc:mysql://--/airlinereservation";
 	private static final String usernameDB = "dba";
 	private static final String passwordDB = "messi10$";
 	
